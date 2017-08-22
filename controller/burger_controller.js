@@ -4,6 +4,7 @@ var router = express.Router();
 
 router.get("/", function(req, res) {
   db.Burger.findAll({}).then(function(data) {
+    console.log(data);
     var hbsObject = {
       burgers: data
     };
